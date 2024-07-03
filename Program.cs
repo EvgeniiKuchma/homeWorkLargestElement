@@ -15,13 +15,13 @@ namespace homeWorkLargestElement
             int changeMaxElement = 0;
             int maxElement = int.MinValue;
 
-            int[,] A = new int[rows, cols];
+            int[,] array = new int[rows, cols];
 
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    A[i, j] = random.Next(minValue, maxValue);
+                    array[i, j] = random.Next(minValue, maxValue);
                 }
             }
 
@@ -29,7 +29,7 @@ namespace homeWorkLargestElement
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    Console.Write(A[i, j] + "\t");
+                    Console.Write(array[i, j] + "\t");
                 }
 
                 Console.WriteLine();
@@ -39,10 +39,9 @@ namespace homeWorkLargestElement
             {
                 for (int j = 0; j < cols; j++)
                 {
-
-                    if (maxElement < A[i, j])
+                    if (maxElement < array[i, j])
                     {
-                        maxElement = A[i, j];
+                        maxElement = array[i, j];
                     }
                 }
             }
@@ -51,10 +50,9 @@ namespace homeWorkLargestElement
             {
                 for (int j = 0; j < cols; j++)
                 {
-
-                    if (maxElement == A[i, j])
+                    if (maxElement == array[i, j])
                     {
-                        A[i, j] = changeMaxElement;
+                        array[i, j] = changeMaxElement;
                     }
                 }
             }
@@ -66,7 +64,7 @@ namespace homeWorkLargestElement
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    Console.Write(A[i, j] + "\t");
+                    Console.Write(array[i, j] + "\t");
                 }
 
                 Console.WriteLine();
